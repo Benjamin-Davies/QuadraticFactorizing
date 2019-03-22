@@ -1,4 +1,6 @@
 ﻿using System;
+using General;
+using static General.IntMath;
 
 namespace QuadraticFactorizing
 {
@@ -16,9 +18,9 @@ namespace QuadraticFactorizing
                 Console.WriteLine("Please enter the values for the equation in the form");
                 Console.WriteLine("\tax\u00B2 + bx + c");
 
-                int a = ReadInt("a");
-                int b = ReadInt("b");
-                int c = ReadInt("c");
+                int a = IO.ReadInt("a");
+                int b = IO.ReadInt("b");
+                int c = IO.ReadInt("c");
 
                 var (ax, ac, bx, bc) = Factorize(a, b, c);
 
@@ -26,23 +28,7 @@ namespace QuadraticFactorizing
             }
         }
 
-        private static int ReadInt(string numName)
-        {
-            while (true)
-            {
-                Console.Write($"{numName} = ");
-                string s = Console.ReadLine();
-
-                if (int.TryParse(s, out int result))
-                {
-                    return result;
-                }
-
-                Console.WriteLine($"{s} is not a valid integer");
-            }
-        }
-
-        private static (int, int, int, int) Factorize(int a, int b, int c)
+        public static (int, int, int, int) Factorize(int a, int b, int c)
         {
             int outerProduct = a * c;
             int factorSearchBound = (int)Math.Sqrt(Math.Abs(outerProduct));
@@ -69,29 +55,6 @@ namespace QuadraticFactorizing
             int ac = c / bc;
 
             return (ax, ac, bx, bc);
-        }
-
-        private static int IntGCF(int a, int b)
-        {
-            if (a < 0 && b < 0)
-                return -GCF(-a, -b);
-
-            return GCF(Math.Abs(a), Math.Abs(b));
-        }
-
-        private static int GCF(int a, int b)
-        {
-            int max = Math.Min(a, b);
-
-            for (int i = max; i > 0; i--)
-            {
-                if (a % i == 0 && b % i == 0)
-                {
-                    return i;
-                }
-            }
-
-            return 1;
         }
     }
 }

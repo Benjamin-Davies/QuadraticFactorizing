@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuadraticFactorizing", "QuadraticFactorizing\QuadraticFactorizing.csproj", "{DDA29410-777D-4A17-B6D9-99E8A01A588C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General", "General\General.csproj", "{BB86D48F-A738-4D0F-B3DE-EE90B3F8FF1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,5 +15,9 @@ Global
 		{DDA29410-777D-4A17-B6D9-99E8A01A588C}.Debug|x86.Build.0 = Debug|x86
 		{DDA29410-777D-4A17-B6D9-99E8A01A588C}.Release|x86.ActiveCfg = Release|x86
 		{DDA29410-777D-4A17-B6D9-99E8A01A588C}.Release|x86.Build.0 = Release|x86
+		{BB86D48F-A738-4D0F-B3DE-EE90B3F8FF1A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BB86D48F-A738-4D0F-B3DE-EE90B3F8FF1A}.Debug|x86.Build.0 = Debug|Any CPU
+		{BB86D48F-A738-4D0F-B3DE-EE90B3F8FF1A}.Release|x86.ActiveCfg = Release|Any CPU
+		{BB86D48F-A738-4D0F-B3DE-EE90B3F8FF1A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
